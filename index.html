@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+  <title>Web Technologies-Jane Wang</title>
+  <style> 
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(166, 79, 207);
+    background-color: rgb(229, 219, 246);
+    text-align: center;
+  }
+  h3{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: rgb(64, 11, 105);
+   text-align: center;
+   font-size: 30px
+  }
+  h2{
+    font-family: tangerine;
+    color: rgb(64, 11, 105);
+    text-align: left;
+    font-size: 30px;
+  }
+  p{
+    font-family: sans-serif;
+    color: rgb(132, 78, 182);
+    font-size: 1.2em;
+    text-indent: 30px;
+  }
+  img{
+   float: left; 
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+   padding: 10px,10px,10px;
+  }
+  body{
+    background-color: rgb(239, 208, 255);
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  a{
+    text-decoration: none;
+  }
+  #quick-links{
+    text-indent: 0%;
+  }
+  footer{
+    text-align: center;
+    padding:3px;
+    background-color: rgb(229, 219, 246);
+    color: rgb(166, 79, 207);
+  }
+  div.a{
+    outline-style: solid;
+    outline-color: rgb(229, 219, 246);
+    /*I learned the outline style and color attribute in css from W3Schools. I used it because I wanted to make the quick links section stand out more*/
+  }
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: lightblue;
+}
+.dropdown-content{
+  /*I learned dropdown-content through W3schools*/
+  display: none;
+  position: absolute;
+  background-color: rgb(166, 79, 207);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  /*I learned about z-index and how it defined overlapping HTML elements from W3schools*/
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a{
+  color:black;
+  padding:12px 16px;
+  display:block;
+  text-align:left;
+}
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Jane Wang</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#scroll_one">About Me</a></li>
+    <li><a href="#scroll_two">My Hobbies</a></li>
+    <li><a href="#scroll_three">Contact Information </a></li>
+    <li><a href="#scroll_four">Portfolio </a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)"
+    class="dropbtn">Homework 2 </a>
+    <div class="dropdown-content">
+      <a href="hw2-1.html">hw2-1</a>
+      <a href="hw2-2.html">hw2-2</a>
+      <a href="hw2-3.html"> hw2-3</a>
+      <a href="hw2-4.html">hw2-4</a>
+    </div>
+  </li>
+<hr>
+<br>  
+  <h2 id="scroll_one">About Me</h2>
+  <p>My name is Jane Wang!
+    <img src="image/janelondonpic.jpg" width="170" alt="">
+ I am currently a third year student at Babson college majoring in business administration and concentrating in marketing where I also play on the varsity women's tennis team! A fun fact about me is that I studied abroad in London last semester and the picture on the left shows me enjoying high tea. Another fun fact about me is that I think I have a creative personality so I utilize that to create content for brands as a hobby as well as earn a little extra money.</p>
+<p >I chose <a href="https://www.babson.edu/"> Babson College</a> because I have always been quite entrepreneurial, and what better school to study business at than the number one school for entrepreneurs.
+I also wanted to play in a competitve tennis team and Babson's womens tennis program is ranked top 30 nationally for the division. As I have lived in Southern California for my whole life, I also always wanted to live and experience the cold as I really enjoy the snow.  After I graduate, I want to work in either the food and beverage industry or the health and wellness industry as a digital marketer. </p>
+<br>
+  <h2 id="scroll_two">My Hobbies</h2>
+  <p>My favorite sport is tennis because of its individual nature and I have been a competitive <a href="https://www.tennis.com/"> tennis </a> player for 12 years.
+     <img src="image/Copy of IMG_0052.JPG" width="175" alt=""> I started playing tennis because my older sister played it and as a typical younger sister, I wanted to do whatever she did. I ended up loving the sport more than she did and pursued it competitively through both local and national tournaments. Even though I love tennis I only ever been to two professional tournaments, the BNP Paribas Masters 1000 at Indian Wells, California, and I'm planning on going again tihs year during spring break. My favorite tennis players are Dominic Thiem &amp Roger Federer because I think their one handed backhand looks very cool.
+  </p> 
+  <hr>
+  <h3 id="scroll_three">Contact Information</h3>
+  <footer>
+   <p>Jane Wang: Web Technologies</p> 
+    <p><a href="https://github.com/jwang154/WebTech">My GitHub Profile</a></p>
+  <p><a href="mailto:jwang15@babson.edu">jwang15@babson.edu</a> </p>
+  <p><a id="scroll_four" href="sitemap.html">Sitemap.html</a> </p>
+  </footer>
+  <!--I learned the footer attribute from W3Schools and the tag defines a footer for a document or section.-->
+  <hr> 
+</body> 
+</html>
