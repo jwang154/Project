@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 238, 241);
+            text-align:center
+        }
+        h1{
+            color:plum;
+            font-family: 'Comic Neue', cursive;
+        }
+        .navigation a{
+            float:left ;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size:17px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        .navigation a:hover{
+            background-color: lightpink;
+            color: rgb(216, 128, 143);
+        }
+        .navigation{
+            background-color:pink;
+            overflow:hidden
+            ;
+        }
+        .navigation a.active{
+            background-color: plum;
+            color: white;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:"one two three"
+                                " four five six "
+                                "seven eight nine"
+                                "ten eleven twelve";
+             padding:5px;
+            margin:5px;
+        }
+        
+        {
+            padding:5px;
+            margin:5px;
+            border:solid white 5px 
+        }
+        .item{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .item-1{
+            grid-area: one;
+        }
+        .item-2{
+            grid-area:two;
+        }
+        .item-3{
+            grid-area:three
+        }
+        .item-4{
+            grid-area: four
+        }
+        .item-5{
+            grid-area:five
+        }
+        .item-6{
+            grid-area:six
+        }
+        .item-7{
+            grid-area:seven
+        }
+        .item-8{
+            grid-area:eight
+        }
+        .item-9{
+            grid-area:nine
+        }
+        .item-10{
+            grid-area:ten
+        }
+        .item-11{
+            grid-area:eleven
+        }
+        .item-12{
+            grid-area:twelve
+        }
+        p{
+            font-family: 'Tilt Neon', cursive;
+            color:gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a  href="index1.html">Home</a>
+        <a  href="the no fail macaron.html">The No Fail Macaron</a>
+        <a  href="aboutme.html">About Me</a>
+        <a class="active" href="gallery.html">Macaron Gallery</a>
+        <a href="more baked goods.html">More Baked Goods!</a>
+        <a href="contactme.html">Contact Me</a>
+    </div>
+    <div>
+        <img src="images/Brown White Modern Bakery Store Mailing Label.png" alt="" width="100%">
+       </div> 
+    <h1>
+        My Macarons!
+    </h1> 
+    <div class="container">
+      <div class="item-1"> <img src="images/galaxy.jpg" alt=""width=80%> <p>The Galaxy Macaron</p>
+    </div> 
+       <div class="item-2"><img src="images/greensprinkles.jpg" alt="" width=80%> <p>The Chocolate Sprinkles Macaron
+       </p></div>
+       <div class="item-3"><img src="images/valentines.jpg" alt="" width=80%><p>The Valentines Macaron</p></div>
+       <div class="item-4"><img src="images/pinklemon.jpg" alt=""width=80%><p>The Class Pink Vanilla Macaron</p></div>
+       <div class="item-5"><img src="images/ube.jpg" alt=""width=80%><p>The Ube Vanilla Macaron</p></div>
+       <div class="item-6"><img src="images/multiswirl.jpg" alt=""width=80%><p>The Marble Swirl Macaron</p></div>
+       <div class="item-7"><img src="images/pikachu.jpg" alt=""width=80%><p>The Pikachu Macaron</p></div>
+       <div class="item-8"><img src="images/rainbow.jpg" alt=""width=80%><p>The Rainbow Assortment</p></div>
+       <div class="item-9"><img src="images/pink lemon.jpg" alt=""width=80%><p>The Pink Lemonade Macaron</p></div>
+       <div class="item-10"><img src="images/rasp.jpg" alt=""width=80%><p>The Rasperry Macaron</p></div>
+       <div class="item-11"><img src="images/thinmint.jpg" alt=""width=80%><p>The Thin Mint Macaron</p></div>
+       <div class="item-12"><img src="images/sunset.jpg" alt=""width=80%><p>The Sunset Macaron</p></div>
+    </div>
+
+</body>
+</html>

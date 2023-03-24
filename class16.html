@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo">This is a demo </p>
+    <p id="demo2">This is another demo</p>
+    <form action="">
+        <div> x= <input type="text" name="x" id="x-input" ></div>
+       <div> y= <input type="text" name="y" id="y-input" ></div>
+        <button type="button">click </button>
+    </form>
+    
+    <!--how to change the text of p#demo sing javascript-->
+    <script>
+        function change(){
+            function calculate(){
+                //calculate the square of the input number, show the result in p#demo
+                console.log("...starting function calculate.");
+                //1. sleect the element for input
+                //const formEl = document.querySelector("form");
+               // const xInput = formEl["x-1"];
+               const xInput = document.getElementById("x-input");
+               const yInput = document.getElementById("y-input");
+                //2. get the input value
+                const xValue = xInput.value;
+                const yValue = yInput.value;
+                //3. calculate the result
+               // const result = xValue + yValue;
+               const result= parseFloat(xValue) + parseFloat(yValue);
+                //4. display the result
+                const demoEl = document.querySelector("p#demo");
+                demoEl.textContent = result;
+                //prompt user to enter te result. if the result is correct, show some encouraging message; otherwise, show some humiliating message. 
+                const userResult = window.prompt("what is x + y");
+                const demo2El = document. getElementById("demo2");
+                if(userResult == result){
+                    demo2El.textContent = "good job"
+
+                } else{
+                    demo2El.text.Content="you should study more...";}
+
+                }
+            }
+            //change the text of p#demo, and hcange some css of the same element, i.e. change the text color to red, background color
+        console.log("..starting function change");
+        // 1. select the element to change
+      //  const demoEl = document.getElementById("demo");
+      //  const demo2El = document.getElementById("demo2");
+        //2. change the element
+      //  demoEl.textContent="hello world!"
+        //demoEl.innerHTML = "hello world!"
+       // demo2El.innerHTML = "hello <strong> world! </strong>";
+        //3. change the target stype property of the element
+       // demoEl.style.color="red";
+        //demoEl.style.backgroundColor='yellow'
+    }
+    // to add evenlistener for the button 
+    document.querySelector('button').addEventListener(
+        "click", 
+        function () { //anonymous function
+          //  change();
+          calculate();
+        });
+        () => { //arrow function
+            change();
+        }
+    );
+    </script>
+</body>
+</html>
