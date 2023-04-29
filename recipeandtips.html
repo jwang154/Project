@@ -120,6 +120,15 @@
         display: block;
         margin: auto;
       }
+      button {
+        display: block;
+        margin: 0 auto;
+        color: pink;
+        background-color: white;
+        border-color: white;
+        border-radius: 25px;
+        font-size: medium;
+      }
       hr{
         border-top: 10px dashed white;
       }
@@ -143,6 +152,7 @@
         }
       }
       /* maximum width of 576px and sets the font-size of the same element to 1em. */
+    
 
    </style>
 </head>
@@ -209,6 +219,19 @@
     </div>
     <br>
     <hr>
+    <h1>Common Beginner Macaron Mistakes </h1>
+    
+    <ul id="mistakes">
+      <li>using another flour instead of almond flour</li>
+      <li>not letting the macaron shell batter dry before placing in the oven</li>
+      <li>adding too much food coloring to the batter</li>
+      <li>not beating the egg whites to a stiff peak</li>
+      <li>adding the white sugar too fast to the egg whites</li>
+      <li>not keeping a close eye on the macaron shells when baking!</li>
+      <li>baking on a rainy day/ day with high</li>
+    </ul>
+    <button>click here to highlight!</button>
+  
     <h1>Want to put try out different fun and unique macaron flavors? Here are some tips to create your own one of a kind macarons!</h1>
     <table>
         <tr>
@@ -222,17 +245,6 @@
           </td>
         </tr>
       </table>
-      
-    <!-- <div class="center">
-        
-    <h2>The Ube Caramel Macaron</h2>
-    <img src="images/ubecar.jpg" alt="" width="450px"> 
-    <p>Do you love ube AND macarons! Well is the macaron to make. The nuttiness of the ube pairs perfectly well with the subtle sweetness of the caramel. In order to make this type of macaron add 1/6 of a teaspoon of <a href="https://www.amazon.com/Ube-Extract-Butterfly-2-oz/dp/B07JH4NG6R/ref=asc_df_B07JH4NG6R/?tag=hyprod-20&linkCode=df0&hvadid=459577931696&hvpos=&hvnetw=g&hvrand=9572071811080720341&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031241&hvtargid=pla-944927582591&psc=1">ube extract</a> in the beginning of step 4. And instead of making vanilla custard as the filling, use store or home made caramel to complete the macaron sandwich</p>
-
-    <h2>The Pink Lemonade Macaron </h2>
-    <img src="images/pink lemon.jpg" alt="" width="450px">
-    <p>Dreaming of simpler times where you would set up a lemonade stand outside your garage? This pink lemonade macaron takes you back to your sweet sweet childhood. Use the same recipe as the classic vanilla macaron for the shell, but for the filling mix lemon extract to get that lemony flavor</p>
-</div> -->
 </div>
 <script>
      function typewriterEffect(element, delay) {
@@ -246,6 +258,20 @@
         });
       }
       typewriterEffect(document.getElementById("typewriter"), 100);
+//highlights the mistakes when button is click
+      function change() {
+       const stuff = document.querySelectorAll("#mistakes li");
+
+      stuff.forEach((item) => {
+       item.style.backgroundColor = "pink";
+       });
+      }
+    document.querySelector("button").addEventListener("click", function () {
+      change();
+    });
+
+
+
 </script>
 </body>
 </html>
