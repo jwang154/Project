@@ -29,7 +29,7 @@
       }
       a {
         text-decoration: none;
-        color: pink
+        color: pink;
       }
       hr {
         border: none;
@@ -100,9 +100,20 @@
         font-weight: bold;
         color: #fff;
         text-shadow: 2px 2px 4px darkgray;
-        font-family: "Lobster Two", cursive;
+        font-family: "Comic Neue", "Tilt Neon";
       }
-
+      @media (max-width: 768px) {
+        #typewriter {
+          font-size: 1.5em;
+        }
+      }
+      /* a maximum width of 768px and sets the font-size of the element with the id "typewriter" to 1.5em.  */
+      @media (max-width: 576px) {
+        #typewriter {
+          font-size: 1em;
+        }
+      }
+      /* maximum width of 576px and sets the font-size of the same element to 1em. */
       .slideshow-container {
         max-width: 1000px;
         position: relative;
@@ -137,7 +148,7 @@
       }
 
       .text {
-        color: plum;
+        color: pink;
         font-size: 15px;
         padding: 8px 12px;
         position: absolute;
@@ -149,7 +160,7 @@
         left: 50%;
         transform: translateX(-50%);
         border-radius: 25px;
-        font-family:  "Comic Neue", "Tilt Neon";
+        font-family: "Comic Neue", "Tilt Neon";
       }
 
       .myslide img {
@@ -170,7 +181,7 @@
         margin-right: 20px;
         width: 200px;
       }
-      h2{
+      h2 {
         color: white;
         background-color: pink;
         font-family: "Comic Neue", "Tilt Neon";
@@ -190,38 +201,37 @@
     </div>
     <div>
       <div class="container-pic">
-        <img
-          src="images/regularbanner.png"
-          width="100%"
-          alt="macarons"
-        />
+        <img src="images/regularbanner.png" width="100%" alt="macarons" />
         <h1 id="typewriter">Welcome to Westview Macarons!</h1>
       </div>
-      <hr/>
+      <hr />
     </div>
     <div class="container">
       <div class="left">
         <h1>
-          Hello! Welcome to all things French Macaron.Here you'll find tips and
+          Hello! Welcome to all things French Macaron. Here you'll find tips and
           tricks to create your own amazingly delicious French Macarons as well
-          as a no fail recipe that will be sure to impress your friends and
-          family! Then after you master the French Macaron, be sure to check out
+          as an easy to follow recipe video that will be sure to impress your friends and
+          family! After you master the French Macaron, be sure to check out
           our Macaron Flavor Generator to help you come up with yummy (and
-          possiblly strange) macaron flavors! Have fun macaron making!
+          possibly strange) macaron flavors! Have fun macaron making!
         </h1>
         <br />
-        <h2>A sneak peak of what you'll find here </h2>
+        <h2>A sneak peak of what you'll find here</h2>
         <div class="slideshow-container">
           <div class="myslide">
             <img src="images/thinmint.jpg" width="70%" alt="macarons" />
             <div class="text">
-              Thin Mint Macarons: the iconic girl scout cookie meets the French Macaron
+              Thin Mint Macarons: the iconic girl scout cookie meets the French
+              Macaron
             </div>
           </div>
 
           <div class="myslide">
             <img src="images/ube.jpg" width="70%" alt="macarons" />
-            <div class="text">Ube Macaron: East meets West, French Macaron edition</div>
+            <div class="text">
+              Ube Macaron: East meets West, French Macaron edition
+            </div>
           </div>
 
           <div class="myslide">
@@ -234,9 +244,9 @@
           <button class="prev">Prev</button>
           <button class="next">Next</button>
         </div>
-        <br/>
+        <br />
         <h1>
-          Now I understand that sometimes deserts look great but taste horrible.
+          Now I understand that sometimes desserts look great but taste horrible.
           Not to worry. Here are some REAL reviews from REAL people about the
           taste of these macarons!
         </h1>
@@ -245,10 +255,16 @@
           <img src="images/review1.jpg" alt="macarons" width="150px" />
           <img src="images/review2.jpg" alt="macarons" width="150px" />
         </span>
+        <br>
       </div>
 
       <div class="right">
-        <img src="images/janelondonpic.jpg" alt="macarons" width="80%" id="jane" />
+        <img
+          src="images/janelondonpic.jpg"
+          alt="macarons"
+          width="80%"
+          id="jane"
+        />
         <p>
           Jane Wang is the founder of Westview Macarons. Learn more about her
           story <a href="aboutme.html">here</a>.
@@ -265,8 +281,8 @@
         />
         <p>
           At Westview Macarons, you can find a collection of unique macarons
-          that are easy to make once you have mastered the no fail macaron!
-          Learn how to make this simple and easy to follow dessert and soon
+          that are easy to make once you have mastered the basic macaron recpe!
+          Learn how to make this simple and easy to follow dessert and soon enough
           you'll be known as the local macaron master!
         </p>
         <img src="images/happyface.png" alt="macarons" width="300px" />

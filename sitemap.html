@@ -28,7 +28,7 @@
       }
       h1,
       h2 {
-        color: plum;
+        color: pink;
         font-family: "Comic Neue", "Tilt Neon";
         text-align: center;
       }
@@ -44,6 +44,18 @@
       h1 {
         background-color: white;
       }
+      @media (max-width: 768px) {
+        #typewriter {
+          font-size: 1.5em;
+        }
+      }
+      /* a maximum width of 768px and sets the font-size of the element with the id "typewriter" to 1.5em.  */
+      @media (max-width: 576px) {
+        #typewriter {
+          font-size: 1em;
+        }
+      }
+      /* maximum width of 576px and sets the font-size of the same element to 1em. */
     </style>
   </head>
   <body>

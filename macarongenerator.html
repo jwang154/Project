@@ -89,14 +89,27 @@
         margin: 0 auto;
         color: pink;
         background-color: white;
-        border-color: grey;
+        border-color: white;
         border-radius: 25px;
+        font-size: medium;
       }
       hr {
         border: none;
         height: 5px;
         background-color: white;
       }
+      @media (max-width: 768px) {
+        #typewriter {
+          font-size: 1.5em;
+        }
+      }
+      /* a maximum width of 768px and sets the font-size of the element with the id "typewriter" to 1.5em.  */
+      @media (max-width: 576px) {
+        #typewriter {
+          font-size: 1em;
+        }
+      }
+      /* maximum width of 576px and sets the font-size of the same element to 1em. */
     </style>
   </head>
   <body>
@@ -120,7 +133,7 @@
     </div>
     <hr/>
     <h1>
-      In a macaron making slump and bored of the same old vanilla flavors? Use
+      In a macaron making slump and bored of the same old flavors? Use
       this macaron flavor generator to try out some fun new flavors!
     </h1>
     <table>
@@ -134,6 +147,7 @@
         </td>
       </tr>
     </table>
+    <br>
     <button id="myButton">Create new flavor now</button>
 
     <script>
@@ -190,7 +204,7 @@
           changeFilling();
           changeColor();
         });
-
+        //generated 3 random pictures to replace the 3 original placeholder pictures 
       function typewriterEffect(element, delay) {
         const textArray = element.innerHTML.split("");
         element.innerHTML = "";

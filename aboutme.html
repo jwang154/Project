@@ -81,6 +81,18 @@
         height: 5px;
         background-color: white;
       }
+      @media (max-width: 768px) {
+        #typewriter {
+          font-size: 1.5em;
+        }
+      }
+      /* a maximum width of 768px and sets the font-size of the element with the id "typewriter" to 1.5em.  */
+      @media (max-width: 576px) {
+        #typewriter {
+          font-size: 1em;
+        }
+      }
+      /* maximum width of 576px and sets the font-size of the same element to 1em. */
     </style>
 </head>
 <body>
@@ -104,9 +116,10 @@
       <hr/>
         <h2>Hello! I'm Jane Wang and I run this page!</h2>
         <img src="images/janelondonpic.jpg" alt="" width="200px" id="me">
-        <p> I started baking for as long as I can remember, but I found my passion for making French Macarons during my sophomore year of high school. As someone who didn't have a job and had no source of income, I remeber walking into a French bakery and thinking "wow those macarons are so expensive"... As a result, my sister and mom urged me to try making some. I was quite nervous to try and make these desserts at first because all my friends who attempted making them before failed horrendously, but surprinsly enough I actually succeeded on my first try. I took this as a sign to start making more uniqe flavors such as ube and rose and I ended up starting my own French Macaron Blog on Instagram where I also sold them to my high school peers. You may be wondering how I came up with the name "Westivew Macarons" but Westview was actually the name of my high school. :)
+        <p> I started baking for as long as I can remember, but I found my passion for making French Macarons during my sophomore year of high school. As someone who didn't have a job and had no source of income, I remember walking into a French bakery and thinking "wow those macarons are so expensive"... As a result, my sister and mom urged me to try making some at home. I was quite nervous to try and make these desserts at first because all my friends who attempted making them before failed horrendously, but surprinsly enough I actually succeeded on my first try. I took this as a sign to start making more uniqe flavors such as ube and rose and I ended up starting my own French Macaron Blog on Instagram. There, I sold them to my high school peers and made some money to keep on experimenting with flavors that you don't typically find in your local bakery. Fun fact: you may be wondering how I came up with the name "Westivew Macarons" but Westview was actually the name of my high school. :)
        </p>
        <script>
+        //dynamic changes to text using javascript
         function typewriterEffect(element, delay) {
            const textArray = element.innerHTML.split("");
            element.innerHTML = "";
