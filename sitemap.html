@@ -26,6 +26,57 @@
       body {
         background-color: rgb(255, 238, 241);
       }
+      .navigation a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "Comic Neue", "Tilt Neon";
+        font-size: 17px;
+        color: white;
+      }
+      .navigation a:hover {
+        background-color: lightpink;
+        color: rgb(216, 128, 143);
+      }
+      .navigation {
+        background-color: pink;
+        overflow: hidden;
+      }
+      .navigation a.active {
+        background-color: plum;
+        color: white;
+      }
+      .container-pic {
+        position: relative;
+        display: block;
+      }
+
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Comic Neue", "Tilt Neon";
+      }
+      @media (max-width: 768px) {
+        #typewriter {
+          font-size: 1.5em;
+        }
+      }
+      /* a maximum width of 768px and sets the font-size of the element with the id "typewriter" to 1.5em.  */
+      @media (max-width: 576px) {
+        #typewriter {
+          font-size: 1em;
+        }
+      }
+      /* maximum width of 576px and sets the font-size of the same element to 1em. */
       h1,
       h2 {
         color: pink;
@@ -41,9 +92,9 @@
         text-decoration: none;
         color: darkgray;
       }
-      h1 {
+     h2{
         background-color: white;
-      }
+     }
       @media (max-width: 768px) {
         #typewriter {
           font-size: 1.5em;
@@ -59,7 +110,19 @@
     </style>
   </head>
   <body>
-    <h1>Westview Macarons Sitemap</h1>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="recipeandtips.html">Recipe and Tips!</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="gallery.html">My Macaron Gallery</a>
+      <a href="macarongenerator.html">Macaron Flavor Generator</a>
+      <a href="contactme.html">Contact Me</a>
+      <a class="active" href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="container-pic">
+      <img src="images/regularbanner.png" width="100%" />
+      <h1 id="typewriter">Sitemap</h1>
+    </div>
     <h2>All things macaron</h2>
     <p><a href="recipeandtips.html">Recipe and Tips!</a></p>
     <p><a href="gallery.html">My Macaron Gallery</a></p>
@@ -69,4 +132,17 @@
     <p><a href="aboutme.html">About me</a></p>
     <p><a href="contactme.html">Contact me!</a></p>
   </body>
+  <script>
+     function typewriterEffect(element, delay) {
+        const textArray = element.innerHTML.split("");
+        element.innerHTML = "";
+
+        textArray.forEach(function (letter, index) {
+          setTimeout(function () {
+            element.innerHTML += letter;
+          }, delay * index);
+        });
+      }
+      typewriterEffect(document.getElementById("typewriter"), 100);
+  </script>
 </html>
