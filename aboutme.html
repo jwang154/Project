@@ -39,7 +39,7 @@
             color: white;
         }
         p{
-            margin-left: 120px;
+            margin-left: 140px;
             margin-right: 120px;
             font-family: 'Tilt Neon', cursive;
             color:gray;
@@ -47,34 +47,77 @@
             padding:10px
         }
         #me{
-            padding: 5px;
-            margin:5px;
+            /* padding: 5px; */
+            margin:5px; 
             border: solid white 5px;
             float: left
         }
-        h1{
-            color:plum;
-            font-family: 'Comic Neue', cursive;
-        }
+        .container-pic {
+        position: relative;
+        display: block;
+      }
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Lobster Two", cursive;
+      }
+      h2{
+        color: white;
+        background-color: pink;
+        font-family: "Lobster Two", cursive;
+        border-radius: 3px;
+        font-size: xx-large
+      }
+      hr {
+        border: none;
+        height: 5px;
+        background-color: white;
+      }
     </style>
 </head>
 <body>
     <div class="navigation">
         <a  href="index.html">Home</a>
-        <a  href="the no fail macaron.html">The No Fail Macaron</a>
+        <a href="recipeandtips.html">Recipe and Tips!</a>
         <a class="active" href="aboutme.html">About Me</a>
         <a href="gallery.html">My Macaron Gallery</a>
-        <a href="more baked goods.html">More Baked Goods!</a>
+        <a href="macarongenerator.html">Macaron Flavor Generator</a>
         <a href="contactme.html">Contact Me</a>
         <a href="sitemap.html">Sitemap</a>
     </div>
-    <div>
-        <img src="images/Brown White Modern Bakery Store Mailing Label.png" alt="" width="100%">
-       </div> 
-      
-        <h1>Hello! I'm Jane Wang and I run this page!</h1>
+    <div class="container-pic">
+        <img
+          src="images/regularbanner.png"
+          width="100%"
+          alt="macarons"
+        />
+        <h1 id="typewriter">About Me</h1>
+      </div> 
+      <hr/>
+        <h2>Hello! I'm Jane Wang and I run this page!</h2>
         <img src="images/janelondonpic.jpg" alt="" width="200px" id="me">
         <p> I started baking for as long as I can remember, but I found my passion for making French Macarons during my sophomore year of high school. As someone who didn't have a job and had no source of income, I remeber walking into a French bakery and thinking "wow those macarons are so expensive"... As a result, my sister and mom urged me to try making some. I was quite nervous to try and make these desserts at first because all my friends who attempted making them before failed horrendously, but surprinsly enough I actually succeeded on my first try. I took this as a sign to start making more uniqe flavors such as ube and rose and I ended up starting my own French Macaron Blog on Instagram where I also sold them to my high school peers. You may be wondering how I came up with the name "Westivew Macarons" but Westview was actually the name of my high school. :)
        </p>
+       <script>
+        function typewriterEffect(element, delay) {
+           const textArray = element.innerHTML.split("");
+           element.innerHTML = "";
+   
+           textArray.forEach(function (letter, index) {
+             setTimeout(function () {
+               element.innerHTML += letter;
+             }, delay * index);
+           });
+         }
+         typewriterEffect(document.getElementById("typewriter"), 100);
+   </script>
 </body>
 </html>

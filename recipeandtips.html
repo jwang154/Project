@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <style>
+
+    body{
+            background-color: rgb(255, 238, 241);
+            margin:0
+        }
+    .navigation a{
+            float:left ;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family:'Lobster Two',cursive ;
+            font-size:17px;
+            color: white;
+        }
+        .navigation a:hover{
+            background-color: lightpink;
+            color: rgb(216, 128, 143);
+        }
+        .navigation{
+            background-color:pink;
+            overflow:hidden
+            ;
+        }
+        .navigation a.active{
+            background-color: plum;
+            color: white;
+        }
+        /* h1,h2{
+            color:plum;
+            font-family: 'Comic Neue', cursive;
+        } */
+
+        h1 {
+        color: darkgray;
+        font-family: "Comic Neue", cursive;
+        font-size: large;
+        margin-left: 20px
+      }
+
+      h2{
+        color: white;
+        background-color: pink;
+        font-family: "Lobster Two", cursive;
+        border-radius: 3px;
+      }
+        p{
+            font-family: 'Tilt Neon', cursive;
+            color:gray;
+            text-align: left;
+            margin-left: 20px;
+    
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: 60% 40%;
+            grid-template-areas: "one two";
+        }
+        .left{
+           grid-area:one 
+        }
+        .right{
+            grid-area:two;
+            text-align: left;
+            padding:10px
+        }
+        .center{
+            text-align: center;
+        }
+        ul{
+            font-family:'Tilt Neon', cursive ;
+            color:gray
+        }
+        .container-pic {
+        position: relative;
+        display: block;
+      }
+      
+
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Lobster Two", cursive;
+      }
+      iframe{
+        margin-left: 20px
+      }
+    
+      td {
+        border: 5px solid white;
+        text-align: center;
+        padding: 5px;
+        border-radius: 25px;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+      hr{
+        border-top: 10px dashed white;
+      }
+      hr {
+        border: none;
+        height: 5px;
+        background-color: white;
+      }
+      a{
+        color: pink
+      }
+
+      /* .vidcontainer {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+} */
+
+/* .vidcontainer iframe {
+  max-width: 60%;
+  max-height: 60%;
+} */
+
+   </style>
+</head>
+<body>
+    <div class="navigation">
+        <a  href="index.html">Home</a>
+        <a class="active" href="recipeandtips.html">Recipe and Tips!</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="gallery.html">My Macaron Gallery</a>
+        <a href="macarongenerator.html">Macaron Flavor Generator</a>
+        <a href="contactme.html">Contact Me</a>
+        <a href="sitemap.html">Sitemap</a>
+    </div>
+       <div class="container-pic">
+        <img
+          src="images/regularbanner.png"
+          width="100%"
+        />
+        <h1 id="typewriter">Recipe and Tips!</h1>
+      </div> 
+      <hr/>
+     <div class="container">
+        <div class="left">
+     <br>       
+    <h1>
+        Watch this easy recipe on how to make a Thin Mint Inspired French Macaron and you'll be known as the macaron master in no time~
+    </h1>
+    <!-- <div class="vidcontainer"> -->
+    <iframe width="80%", height="80%" src="https://www.youtube.com/embed/-OawF5aJ-rc" title="YouTube video player" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- </div> -->
+    <p> ***don't want to make thin mint macarons, just remove the mint coloring and chocolte drizzle to have the good ol' classic macaron!</p>  
+    </div>
+    <br>
+            <div class="right">
+            <br>
+            <h2>Macaron Shell Ingredients:</h2>
+            <ul>
+            <li>1 Cup Almond flour </li>
+            <li>1 3/4 Cup Powdered Sugar</li>
+            <li>2-4 Tablespoons of White sugar</li>
+            <li>3 Eggs</li>
+            <li>Green food coloring (optional)</li>
+            <li>Mint Extract (optional)</li>
+            </ul>
+            <h2>Macaron Filling Ingredients</h2>
+            <ul>
+            <li> 4 Tablespoons of Chocolate chips</li>
+            <li>1 Stick of Butter</li>
+            <li>2 Tablespoons of Milk</li>
+            <li>Vanilla Extract</li>
+            <li>3 Egg Yolks</li>
+            </ul>
+            <h2>Materials Needed</h2>
+            <ul>
+                <li>Small Saucepan</li>
+                <li>Piping Bag</li>
+                <li>Baking Tray</li>
+                <li>Measure Cup/ Spoon</li>
+                <li>Whisk</li>
+                <li>Fork</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h1>Want to put try out different fun and unique macaron flavors? Here are some tips to create your own one of a kind macarons!</h1>
+    <table>
+        <tr>
+          <td>
+            <img src="images/ubecar.jpg" alt="" width="450px">
+            <p>Do you love ube AND macarons! Well is the macaron to make. The nuttiness of the ube pairs perfectly well with the subtle sweetness of the caramel. In order to make this type of macaron add 1/6 of a teaspoon of <a href="https://www.amazon.com/Ube-Extract-Butterfly-2-oz/dp/B07JH4NG6R/ref=asc_df_B07JH4NG6R/?tag=hyprod-20&linkCode=df0&hvadid=459577931696&hvpos=&hvnetw=g&hvrand=9572071811080720341&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031241&hvtargid=pla-944927582591&psc=1">ube extract</a> in the beginning of step 4. And instead of making vanilla custard as the filling, use store or home made caramel to complete the macaron sandwich</p>
+          </td>
+          <td>
+            <img src="images/pink lemon.jpg" alt="" width="450px">
+            <p>Dreaming of simpler times where you would set up a lemonade stand outside your garage? This pink lemonade macaron takes you back to your sweet sweet childhood. Use the same recipe as the classic vanilla macaron for the shell, but for the filling mix lemon extract to get that lemony flavor</p>
+          </td>
+        </tr>
+      </table>
+      
+    <!-- <div class="center">
+        
+    <h2>The Ube Caramel Macaron</h2>
+    <img src="images/ubecar.jpg" alt="" width="450px"> 
+    <p>Do you love ube AND macarons! Well is the macaron to make. The nuttiness of the ube pairs perfectly well with the subtle sweetness of the caramel. In order to make this type of macaron add 1/6 of a teaspoon of <a href="https://www.amazon.com/Ube-Extract-Butterfly-2-oz/dp/B07JH4NG6R/ref=asc_df_B07JH4NG6R/?tag=hyprod-20&linkCode=df0&hvadid=459577931696&hvpos=&hvnetw=g&hvrand=9572071811080720341&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031241&hvtargid=pla-944927582591&psc=1">ube extract</a> in the beginning of step 4. And instead of making vanilla custard as the filling, use store or home made caramel to complete the macaron sandwich</p>
+
+    <h2>The Pink Lemonade Macaron </h2>
+    <img src="images/pink lemon.jpg" alt="" width="450px">
+    <p>Dreaming of simpler times where you would set up a lemonade stand outside your garage? This pink lemonade macaron takes you back to your sweet sweet childhood. Use the same recipe as the classic vanilla macaron for the shell, but for the filling mix lemon extract to get that lemony flavor</p>
+</div> -->
+</div>
+<script>
+     function typewriterEffect(element, delay) {
+        const textArray = element.innerHTML.split("");
+        element.innerHTML = "";
+
+        textArray.forEach(function (letter, index) {
+          setTimeout(function () {
+            element.innerHTML += letter;
+          }, delay * index);
+        });
+      }
+      typewriterEffect(document.getElementById("typewriter"), 100);
+</script>
+</body>
+</html>

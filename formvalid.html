@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" />
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const firstNameInput = document.querySelector("#first-name");
+      const lastNameInput = document.querySelector("#last-name");
+      const commentsInput = document.querySelector("#comments");
+
+      form.addEventListener("submit", (event) => {
+        if (!firstNameInput.value || !lastNameInput.value || !commentsInput.value) {
+          event.preventDefault();
+          alert("Please fill out all fields");
+        }
+      });
+    </script>
+  </body>
+</html>

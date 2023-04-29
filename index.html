@@ -1,138 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/android-chrome-512x512.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-        body{
-            background-color: rgb(255, 238, 241);
-            margin:0
-        }
-    .container{
+      body {
+        background-color: rgb(255, 238, 241);
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: pink
+      }
+      hr {
+        border: none;
+        height: 5px;
+        background-color: white;
+      }
+      p {
+        color: darkgray;
+        font-family: "Comic Neue", cursive;
+      }
+      h1 {
+        color: darkgray;
+        font-family: "Comic Neue", cursive;
+        font-size: large;
+      }
+
+      .container {
         display: grid;
         grid-template-columns: 80% 20%;
-        grid-template-areas:'one two' ;
-    }
-    .left{
-       grid-area: one; 
-       justify-content: center;
+        grid-template-areas: "one two";
+      }
+      .left {
+        grid-area: one;
+        justify-content: center;
         align-items: center;
         text-align: center;
         margin-left: 20px;
         margin-right: 20px;
-    }
-    .right{
-        grid-area:two;
-        text-align:center
-    }
-    .navigation a{
-            float:left ;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-family:'Lobster Two',cursive ;
-            font-size:17px;
-            color: white;
-        }
-        .navigation a:hover{
-            background-color: lightpink;
-            color: rgb(216, 128, 143);
-        }
-        .navigation{
-            background-color:pink;
-            overflow:hidden
-            ;
-        }
-        .navigation a.active{
-            background-color: plum;
-            color: white;
-        }
-        p{
-            font-family: 'Tilt Neon', cursive;
-            color:gray;
-            text-align: center;
-        }
-        h1{
-            color:plum;
-            font-family: 'Comic Neue', cursive;
-        }
-        hr{
-            border: 2px dashed gray
-        }
-        #other, #jane{
-            border:solid white 5px
-        }
-        #other{
-            padding:10px;
-            margin:10px;
-        }
-        a{
-            text-decoration: none;
-        }
-        button{
-            background-color: pink;
-            font-family:'Comic Neue', cursive;
-            color:white;
-            text-decoration: none
+      }
+      .right {
+        grid-area: two;
+        text-align: center;
+      }
+      .navigation a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "Lobster Two", cursive;
+        font-size: 17px;
+        color: white;
+      }
+      .navigation a:hover {
+        background-color: lightpink;
+        color: rgb(216, 128, 143);
+      }
+      .navigation {
+        background-color: pink;
+        overflow: hidden;
+      }
+      .navigation a.active {
+        background-color: plum;
+        color: white;
+      }
+      .container-pic {
+        position: relative;
+        display: block;
+      }
 
-        }
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Lobster Two", cursive;
+      }
+
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        text-align: center;
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 6px;
+        margin: 0;
+        color: plum;
+        background-color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 25px;
+        user-select: none;
+        border-color: white;
+      }
+
+      .prev {
+        left: 0;
+      }
+
+      .next {
+        right: 0;
+      }
+
+      .text {
+        color: plum;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        max-width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 25px;
+        font-family: "Lobster Two", cursive;
+      }
+
+      .myslide img {
+        border: 5px solid white;
+        border-radius: 25px;
+      }
+      /* .text {
+        color: rgba(255, 255, 255, 0.1);
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        max-width: 70%;
+      } */
+      #reviews img {
+        margin-right: 20px;
+        width: 200px;
+      }
+      h2{
+        color: white;
+        background-color: pink;
+        font-family: "Lobster Two", cursive;
+        border-radius: 25px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navigation">
-        <a class="active" href="#home">Home</a>
-        <a href="the no fail macaron.html">The No Fail Macaron</a>
-        <a href="aboutme.html">About Me</a>
-        <a href="gallery.html">My Macaron Gallery</a>
-        <a href="more baked goods.html">More Baked Goods!</a>
-        <a href="contactme.html">Contact Me</a>
-        <a href="sitemap.html">Sitemap</a>
+      <a class="active" href="#home">Home</a>
+      <a href="recipeandtips.html">Recipe and Tips!</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="gallery.html">My Macaron Gallery</a>
+      <a href="macarongenerator.html">Macaron Flavor Generator</a>
+      <a href="contactme.html">Contact Me</a>
+      <a href="sitemap.html">Sitemap</a>
     </div>
-   <div>
-    <img src="images/Brown White Modern Bakery Store Mailing Label.png" alt="" width="100%">
-   </div> 
-   <hr>
-   <div class="container">
-    <div class="left">
-        <h1>UBE CARAMEL MACARON</h1>
-        <br>
-        <img src="images/ubecar.jpg" alt="" width="450px" id="other">
-        <p> Do you love ube and macarons! Well is the macaron to make. The nuttiness of the ube pairs perfectly well with the subtle sweetness of the caramel...
+    <div>
+      <div class="container-pic">
+        <img
+          src="images/Brown White Modern Bakery Store Mailing Label.png"
+          width="100%"
+          alt="macarons"
+        />
+        <h1 id="typewriter">Welcome to Westview Macarons!</h1>
+      </div>
+      <hr/>
+    </div>
+    <div class="container">
+      <div class="left">
+        <h1>
+          Hello! Welcome to all things French Macaron.Here you'll find tips and
+          tricks to create your own amazingly delicious French Macarons as well
+          as a no fail recipe that will be sure to impress your friends and
+          family! Then after you master the French Macaron, be sure to check out
+          our Macaron Flavor Generator to help you come up with yummy (and
+          possible strange) macaron flavors! Have fun macaron making!
+        </h1>
+        <br />
+        <h2>A sneak peak of what you'll find here </h2>
+        <div class="slideshow-container">
+          <div class="myslide">
+            <img src="images/thinmint.jpg" width="70%" alt="macarons" />
+            <div class="text">
+              Thin Mint Macarons: the iconic girl scout cookie meets the French Macaron
+            </div>
+          </div>
+
+          <div class="myslide">
+            <img src="images/ube.jpg" width="70%" alt="macarons" />
+            <div class="text">Ube Macaron: East meets West, French Macaron edition</div>
+          </div>
+
+          <div class="myslide">
+            <img src="images/rasp.jpg" width="70%" alt="macarons" />
+            <div class="text">
+              Raspberry Vanilla Macaron: A class fan favorite!
+            </div>
+          </div>
+
+          <button class="prev">Prev</button>
+          <button class="next">Next</button>
+        </div>
+        <br/>
+        <h1>
+          Now I understand that sometimes deserts look great but taste horrible.
+          Not to worry. Here are some REAL reviews from REAL people about the
+          taste of these macarons!
+        </h1>
+        <span id="reviews">
+          <img src="images/review.jpg" alt="macarons" width="150px" />
+          <img src="images/review1.jpg" alt="macarons" width="150px" />
+          <img src="images/review2.jpg" alt="macarons" width="150px" />
+        </span>
+      </div>
+
+      <div class="right">
+        <img src="images/janelondonpic.jpg" alt="macarons" width="80%" id="jane" />
+        <p>
+          Jane Wang is the founder of Westview Macarons. Learn more about her
+          story <a href="aboutme.html">here</a>.
         </p>
-        <button> <a href="the no fail macaron.html">Continue Reading</a></button>
-        <br>
-        <h1>PINK LEMONADE MACARON</h1>
-        <br>
-        <img src="images/pinklemon.jpg" alt="" width="450px" id="other">
-        <p>Dreaming of simpler times where you would set up a lemonade stand outside your garage? This pink lemonade macaron takes you back to your sweet sweet childhood... </p>
-        <button><a href="the no fail macaron.html">Continue Reading</a></button>
-        <h1>Our Satisfied Customers</h1>
-        <img src="images/review.jpg" alt="" width="150px">
-        <img src="images/review1.jpg" alt="" width="150px">
-        <img src="images/review2.jpg" alt="" width="150px">
+        <hr />
+        <p>
+          Westview Macarons is home to cute and customizable desserts,
+          specifically French Macarons!
+        </p>
+        <img
+          src="images/Glass Cake Dome And Macarons Peach Color With Inscription Dessert Store Modern Brand Logo.png"
+          alt="macarons"
+          width="200px"
+        />
+        <p>
+          At Westview Macarons, you can find a collection of unique macarons
+          that are easy to make once you have mastered the no fail macaron!
+          Learn how to make this simple and easy to follow dessert and soon
+          you'll be known as the local macaron master!
+        </p>
+        <img src="images/happyface.png" alt="macarons" width="300px" />
+      </div>
     </div>
-    <div class="right">
-        <img src="images/janelondonpic.jpg" alt="" width="80%" id="jane">
-      <p>Jane Wang is the founder of Westview Macarons. Learn more about her story <a href="aboutme.html">here</a>.</p> 
-      <hr>
-      <p>Westview Macarons is home to cute and customizable desserts, specifically French Macarons!</p>
-      <img src="images/Glass Cake Dome And Macarons Peach Color With Inscription Dessert Store Modern Brand Logo.png" alt="" width="200px">
-      <p>At Westview Macarons, you can find a collection of unique macarons that are easy to make once you have mastered the no fail macaron! Learn how to make this simple and easy to follow dessert and soon you'll be known as the local macaron master!</p> 
-      <img src="images/happyface.png" alt="" width="200px">
-     
-    </div>
-   </div>
-</body>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("myslide");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      document.querySelector(".prev").addEventListener("click", function () {
+        plusSlides(-1);
+      });
+
+      document.querySelector(".next").addEventListener("click", function () {
+        plusSlides(1);
+      });
+
+      function typewriterEffect(element, delay) {
+        const textArray = element.innerHTML.split("");
+        element.innerHTML = "";
+
+        textArray.forEach(function (letter, index) {
+          setTimeout(function () {
+            element.innerHTML += letter;
+          }, delay * index);
+        });
+      }
+      typewriterEffect(document.getElementById("typewriter"), 100);
+    </script>
+  </body>
 </html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      h1 {
+        color: darkgray;
+        font-family: "Comic Neue", cursive;
+        font-size: large;
+        text-align: center;
+      }
+      body {
+        background-color: rgb(255, 238, 241);
+      }
+      .navigation a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "Lobster Two", cursive;
+        font-size: 17px;
+        color: white;
+      }
+      .navigation a:hover {
+        background-color: lightpink;
+        color: rgb(216, 128, 143);
+      }
+      .navigation {
+        background-color: pink;
+        overflow: hidden;
+      }
+      .navigation a.active {
+        background-color: plum;
+        color: white;
+      }
+      .container-pic {
+        position: relative;
+        display: block;
+      }
+
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Lobster Two", cursive;
+      }
+      table img {
+        width: 300px;
+        height: 300px;
+      }
+      table {
+        background-color: white;
+        margin: 0 auto;
+      }
+      p {
+        font-family: "Tilt Neon", cursive;
+        color: purple;
+        text-align: center;
+      }
+      #myButton {
+        display: block;
+        margin: 0 auto;
+        color: pink;
+        background-color: white;
+        border-color: grey;
+        border-radius: 25px;
+      }
+      hr {
+        border: none;
+        height: 5px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="recipeandtips.html">Recipe and Tips!</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="gallery.html">My Macaron Gallery</a>
+      <a class="active" href="macarongenerator.html"
+        >Macaron Flavor Generator</a
+      >
+      <a href="contactme.html">Contact Me</a>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <div class="container-pic">
+      <img
+        src="images/Brown White Modern Bakery Store Mailing Label.png"
+        width="100%"
+      />
+      <h1 id="typewriter">Macaron Flavor Generator</h1>
+    </div>
+    <hr/>
+    <h1>
+      In a macaron making slump and bored of the same old vanilla flavors? Use
+      this macaron flavor generator to try out some fun new flavors!
+    </h1>
+    <table>
+      <tr>
+        <td><img src="images/Shell Flavor.png" alt="Image 1" id="shell" /></td>
+        <td>
+          <img src="images/Shell Flavor (1).png" alt="Image 2" id="filling" />
+        </td>
+        <td>
+          <img src="images/Shell Flavor (2).png" alt="Image 3" id="color" />
+        </td>
+      </tr>
+    </table>
+    <button id="myButton">Create new flavor now</button>
+
+    <script>
+      function changeShell() {
+        const topImages = [
+          "images/flavors/banana.png",
+          "images/flavors/chocolate.png",
+          "images/flavors/mint.png",
+          "images/flavors/pear.png",
+          "images/flavors/pineapple.png",
+          "images/flavors/ube.png",
+          "images/flavors/vanilla.png",
+        ];
+        const shellImgElement = document.getElementById("shell");
+        const randomIndex = Math.floor(Math.random() * topImages.length);
+        const randomImage = topImages[randomIndex];
+        shellImgElement.src = randomImage;
+      }
+
+      function changeFilling() {
+        const fillingImages = [
+          "images/flavors/banana.png",
+          "images/flavors/chocolate.png",
+          "images/flavors/mint.png",
+          "images/flavors/pear.png",
+          "images/flavors/pineapple.png",
+          "images/flavors/ube.png",
+          "images/flavors/vanilla.png",
+        ];
+        const fillingImgElement = document.getElementById("filling");
+        const randomIndex = Math.floor(Math.random() * fillingImages.length);
+        const randomImage = fillingImages[randomIndex];
+        fillingImgElement.src = randomImage;
+      }
+
+      function changeColor() {
+        const colorImages = [
+          "images/colors/blue.png",
+          "images/colors/green.png",
+          "images/colors/pink.png",
+          "images/colors/purple.png",
+          "images/colors/yellow.png",
+        ];
+        const colorImgEl = document.getElementById("color");
+        const randomIndex = Math.floor(Math.random() * colorImages.length);
+        const randomImage = colorImages[randomIndex];
+        colorImgEl.src = randomImage;
+      }
+
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          changeShell();
+          changeFilling();
+          changeColor();
+        });
+
+      function typewriterEffect(element, delay) {
+        const textArray = element.innerHTML.split("");
+        element.innerHTML = "";
+
+        textArray.forEach(function (letter, index) {
+          setTimeout(function () {
+            element.innerHTML += letter;
+          }, delay * index);
+        });
+      }
+      typewriterEffect(document.getElementById("typewriter"), 100);
+    </script>
+  </body>
+</html>

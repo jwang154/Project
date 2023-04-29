@@ -1,124 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-        body{
-            background-color: rgb(255, 238, 241);
-            margin:0
-        }
-        .navigation a{
-            float:left ;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size:17px;
-            color: white;
-            font-family: 'Lobster Two',cursive
-            ;
-        }
-        .navigation a:hover{
-            background-color: lightpink;
-            color: rgb(216, 128, 143);
-        }
-        .navigation{
-            background-color:pink;
-            overflow:hidden;
-            
-        }
-        .navigation a.active{
-            background-color: plum;
-            color: white;
-        }
-        form{
-            width:100%;
-            margin:10px
-        }
-        h1{
-            color:plum;
-            font-family: 'Comic Neue', cursive;
-        }
-        .container{
-            font-family: 'Tilt Neon', cursive;
-            color:gray
-        }
-        button{
-            background-color:pink;
-            color:gray
-        }
+      body {
+        background-color: rgb(255, 238, 241);
+        margin: 0;
+      }
+      .navigation a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        color: white;
+        font-family: "Lobster Two", cursive;
+      }
+      .navigation a:hover {
+        background-color: lightpink;
+        color: rgb(216, 128, 143);
+      }
+      .navigation {
+        background-color: pink;
+        overflow: hidden;
+      }
+      .navigation a.active {
+        background-color: plum;
+        color: white;
+      }
+      form {
+        width: 100%;
+        margin: 10px;
+      }
+      h1 {
+        color: plum;
+        font-family: "Comic Neue", cursive;
+      }
+      .container {
+        font-family: "Tilt Neon", cursive;
+        color: gray;
+      }
+      button {
+        background-color: pink;
+        color: gray;
+      }
+      hr {
+        border: none;
+        height: 5px;
+        background-color: white;
+      }
+      .container-pic {
+        position: relative;
+        display: block;
+      }
 
+      .container-pic #typewriter {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px darkgray;
+        font-family: "Lobster Two", cursive;
+      }
+
+      /* chatgpt css */
+      .container {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: larger;
+      }
+
+      input,
+      textarea {
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: larger;
+      }
+
+      button {
+        background-color: pink;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: rgb(226, 137, 152);
+      }
+      h2 {
+        color: white;
+        background-color: pink;
+        font-family: "Lobster Two", cursive;
+        border-radius: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navigation">
-        <a  href="index.html">Home</a>
-        <a  href="the no fail macaron.html">The No Fail Macaron</a>
-        <a  href="aboutme.html">About Me</a>
-        <a  href="gallery.html">My Macaron Gallery</a>
-        <a href="more baked goods.html">More Baked Goods!</a>
-        <a class="active" href="contactme.html">Contact Me</a>
-        <a href="sitemap.html">Sitemap</a>
+      <a href="index.html">Home</a>
+      <a href="recipeandtips.html">Recipe and Tips!</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="gallery.html">My Macaron Gallery</a>
+      <a href="macarongenerator.html">Macaron Flavor Generator</a>
+      <a class="active" href="contactme.html">Contact Me</a>
+      <a href="sitemap.html">Sitemap</a>
     </div>
-    <div>
-        <img src="images/Brown White Modern Bakery Store Mailing Label.png" alt="" width="100%">
-       </div> 
-       <h1>Any Questions? Feel free to leave a message!</h1>
-       <div class="container">
-        <form action="#" method="POST">
+    <div class="container-pic">
+      <img src="images/regularbanner.png" width="100%" />
+      <h1 id="typewriter">Contact Me</h1>
+    </div>
+    <h2>Any Questions? Feel free to leave a message!</h2>
+    <div class="container">
+      <div class="container">
+        <form method="POST" action="mailto:jwang15@babson.edu">
+          <div>
+            <label for="last-name">Last Name:</label>
+            <input
+              type="text"
+              name="lname"
+              id="last-name"
+              placeholder="last name"
+            />
+          </div>
+          <div>
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              name="fname"
+              id="first-name"
+              placeholder="first name"
+            />
+          </div>
+          <div>
+            <label for="Email-address">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="Email-address"
+              placeholder="email address"
+            />
             <div>
-                <label for="last-name">Last Name:</label>
-                <input
-                type="text"
-                name="lname"
-                id="last-name"
-                placeholder="last name"
-                /> 
+              <div>
+                <label for="comments">Leave a Comment</label>
+              </div>
+              <div>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows="5"
+                  cols="25"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
             </div>
-            <div>
-                <label for="first-name">First Name:</label>
-                <input
-                 type="text"
-                 name="fname"
-                 id="first-name"
-                 placeholder="first name"
-                 /> 
-            </div>
-            <div>
-                <label for="Email-address">Email:</label>
-                <input
-                 type="text"
-                 name="email"
-                 id="Email-address"
-                 placeholder="email address"
-                 />
-                <div>
-                    <div>
-                        <label for="comments">Leave a Reply</label>
-                        </div>
-                        <div>
-                            <textarea
-                            id="comments"
-                            name="comments"
-                            rows="5"
-                            cols="25"
-                            placeholder="Enter your comment here..."></textarea>
-                        </div>
-                     </div>
-                    <button type="submit">
-                        submit
-                    </button>
-                    <button type="reset">
-                        reset
-                    </button>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+          </div>
         </form>
-       </div>   
-</body>
+      </div>
+    </div>
+    <script>
+      function typewriterEffect(element, delay) {
+        const textArray = element.innerHTML.split("");
+        element.innerHTML = "";
+
+        textArray.forEach(function (letter, index) {
+          setTimeout(function () {
+            element.innerHTML += letter;
+          }, delay * index);
+        });
+      }
+      typewriterEffect(document.getElementById("typewriter"), 100);
+
+      const form = document.querySelector("form");
+      const firstNameInput = document.querySelector("#first-name");
+      const lastNameInput = document.querySelector("#last-name");
+      const commentsInput = document.querySelector("#comments");
+      const emailInput = document.querySelector("#Email-address");
+
+      form.addEventListener("submit", (event) => {
+        if (
+          !firstNameInput.value ||
+          !lastNameInput.value ||
+          !commentsInput.value ||
+          !emailInput.value
+        ) {
+          event.preventDefault();
+          alert("Please fill out all fields");
+        }
+      });
+    </script>
+  </body>
 </html>
