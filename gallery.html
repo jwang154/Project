@@ -128,9 +128,9 @@
         font-family: "Lobster Two", cursive;
       }
       .container img:hover {
-			transform: scale(1.2);
-		}
-        hr {
+        transform: scale(1.2);
+      }
+      hr {
         border: none;
         height: 5px;
         background-color: white;
@@ -148,13 +148,10 @@
       <a href="sitemap.html">Sitemap</a>
     </div>
     <div class="container-pic">
-        <img
-          src="images/Brown White Modern Bakery Store Mailing Label.png"
-          width="100%"
-        />
-        <h1 id="typewriter">My Macaron Gallery</h1>
-      </div>
-      <hr/>
+      <img src="images/regularbanner.png" width="100%" />
+      <h1 id="typewriter">My Macaron Gallery</h1>
+    </div>
+    <hr />
     <div class="container">
       <div class="item-1">
         <img src="images/galaxy.jpg" alt="macarons" width="80%" />
@@ -206,7 +203,7 @@
       </div>
     </div>
     <script>
-        function typewriterEffect(element, delay) {
+      function typewriterEffect(element, delay) {
         const textArray = element.innerHTML.split("");
         element.innerHTML = "";
 
@@ -217,8 +214,6 @@
         });
       }
       typewriterEffect(document.getElementById("typewriter"), 100);
-
-    
     </script>
   </body>
 </html>
